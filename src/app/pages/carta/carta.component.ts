@@ -7,6 +7,9 @@ import { StorageService } from 'src/app/services/storage.service';
   styleUrls: ['./carta.component.css'],
 })
 export class CartaComponent implements OnInit {
+
+  public items:any
+
   constructor(private storage: StorageService) {}
 
   ngOnInit(): void {
@@ -15,6 +18,7 @@ export class CartaComponent implements OnInit {
 
   getMenuItems(): any {
     this.storage.GetAll('items').subscribe((items) => {
+      this.items = items
       console.log(items);
     });
   }
