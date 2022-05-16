@@ -1,24 +1,30 @@
 .card {
-    margin: 1.1em;
-      border-radius: 30px;
-      height: 100%;
-    }
-    
-    .card-img {
-      border-radius: 30px;
-      height: 100%;
-      max-width: 100%;
-      background-size: cover;
-    }
-    
-    .card-item-name {
-      font-size: 1.4em;
-      font-weight: 800;
-      margin-top: 1em;
-    }
-    
-    .card-item-description {
-      font-size: 0.8em;
-      font-weight: 280;
-    margin-top: 0.3em;
-    }
+  margin: 1em;
+  border-radius: 30px;
+  height: 22vh;
+}
+
+img {
+  width: 200px; /* You can set the dimensions to whatever you want */
+  height: 22vh;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.card-img {
+  border-radius: 30px;
+
+}
+
+.card-item-name {
+  font-size: 1.3em;
+  font-weight: 800;
+  margin-top: 0.2em;
+}
+
+.card-item-description {
+  font-size: 0.8em;
+  font-weight: 280;
+  letter-spacing: -0.8px;
+  margin-top: 0.1em;
+}
