@@ -1,0 +1,131 @@
+.card-item {
+  cursor: move;
+  display: flex;
+
+position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65%;
+  background: #d6e4f1;
+  border-bottom: 0px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  border-top-left-radius: 60px 60px;
+  border-top-right-radius: 60px 60px;
+}
+
+.item-close{
+  text-align: center;
+  z-index: 1;
+  height: 25px;
+  width: 100%;
+}
+
+.item-name {
+  font-size: 2.7em;
+  font-weight: 800;
+  
+  text-align: center;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.item-description {
+  font-size: 1.1em;
+}
+
+.item-img {
+  border-radius: 60px;
+  max-height: 100vh;
+  max-width: 92vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.item-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7em;
+
+}
+
+/* From uiverse.io */
+button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+ }
+ 
+ .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform
+     600ms
+     cubic-bezier(.3, .7, .4, 1);
+ }
+ 
+ .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+     to left,
+     hsl(340deg 100% 16%) 0%,
+     hsl(340deg 100% 32%) 8%,
+     hsl(340deg 100% 32%) 92%,
+     hsl(340deg 100% 16%) 100%
+   );
+ }
+ 
+ /* From uiverse.io by @alexmaracinaru */
+button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #ef8300;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+ }
+ 
+ button:hover {
+  background: #e19211;
+ }
+ 
+ button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+ }
+ 
+ button:hover svg {
+  transform: translateX(5px);
+ }
+ 
+ button:active {
+  transform: scale(0.95);
+ }
+ 
+ 
