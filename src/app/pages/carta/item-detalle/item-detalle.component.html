@@ -1,12 +1,8 @@
 <div class="card-item animate__animated animate__slideInUp">
-    <div class="container mt-4">
-      <div class="item-close" (click)="close()"> <a href="#">Toca para cerrar</a> </div>
+  <div class="container mt-4">
+    <div class="item-close" (click)="close()"><a href="#">Toca para cerrar</a></div>
     <div class="item-img">
-      <img
-        class="img-fluid item-img"
-        src="https://www.cocinayvino.com/wp-content/uploads/2016/09/tazadecafe-1-1200x900.jpg"
-        alt=""
-      />
+      <img class="img-fluid item-img" src="{{ item.img }}" alt="" />
     </div>
 
     <div class="item-name">{{ item.name }}</div>
