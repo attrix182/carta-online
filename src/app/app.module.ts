@@ -13,8 +13,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { MakeOrderComponent } from './pages/carta/make-order/make-order.component';
 import { SuccessComponent } from './shared/success/success.component';
 import { AppRoutingModule } from './app-routing.module';
+import { OrdersComponent } from './pages/orders/orders.component';
 @NgModule({
-  declarations: [AppComponent, CartaComponent, TopbarComponent, ItemComponent, ItemDetalleComponent, MakeOrderComponent, SuccessComponent],
+  declarations: [AppComponent, CartaComponent, TopbarComponent, ItemComponent, ItemDetalleComponent, MakeOrderComponent, SuccessComponent, OrdersComponent],
   imports: [
     BrowserModule,
     FormsModule,

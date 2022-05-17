@@ -1,6 +1,6 @@
-<section class="make-order container-fluid">
+<section class="make-order container-fluid mt-2">
   <form class="mt-4">
-    <div class="title mt-2">
+    <div class="title mt-4">
         Tu nombre:
     </div>
     <input autocomplete="off" class="form-control" type="text" name="name" [(ngModel)]="name" />
@@ -9,9 +9,18 @@
     </div>
     <app-item [item]="order"></app-item>
   </form>
-  <div class="center mt-4">
+  <div class="center mt-4" *ngIf="!isLoading">
     <button [disabled]="!name" (click)="postOrder()">
       <span>Finalizar pedido</span>
     </button>
   </div>
+
+  <div class="center mt-4" *ngIf="isLoading">
+    <button>
+      <div class="spinner-border text-dark" role="status">
+          <span class="sr-only">Pidiendo...</span>
+      </div>
+    </button>
+  </div>
+
 </section>

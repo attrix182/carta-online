@@ -12,8 +12,7 @@ img {
 }
 
 .card-img {
-  border-radius: 30px;
-
+  border-radius: 30px; 
 }
 
 .card-item-name {
@@ -26,4 +25,5 @@ img {
   font-size: 0.8em;
   font-weight: 280;
   margin-top: 0.1em;
+  margin-right: 9.1px;
 }

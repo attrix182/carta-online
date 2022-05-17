@@ -9,6 +9,7 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class MakeOrderComponent implements OnInit {
   name:string;
+  isLoading:boolean = false;
   @Input() order:any
 
   constructor(private storage:StorageService, private router:Router) { }
@@ -17,14 +18,18 @@ export class MakeOrderComponent implements OnInit {
   }
 
   postOrder(){
+    this.isLoading = true;
     let orderFormat = {
       name:this.name,
       order:this.order
     }
     this.storage.Insert('orders',orderFormat).then(()=>{
-      this.router.navigate(['/success'])
+      this.isLoading = false;
       console.log('order posted')
-    });
+      this.router.navigate(['/success'])
+    }).finally(()=>{
+      this.isLoading = false;
+    })
   }
 
 

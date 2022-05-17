@@ -1,0 +1,23 @@
+<div class="title mt-2">Ordenes:</div>
+<section>
+  <div class="row">
+    <div class="col">
+      <button (click)="filterByPending()" class="btn btn-primary btn-block" type="button">Pendietes</button>
+    </div>
+    <div class="col">
+      <button (click)="filterByCompleted()" class="btn btn-success btn-block" type="button">Listas</button>
+    </div>
+  </div>
+</section>
+<section *ngFor="let order of auxOrders" [ngClass]="order.status" (click)="completeOrder(order)">
+  <div>
+    <hr />
+    <div class="order-name">{{ order.name }}</div>
+    <app-item [item]="order.order"></app-item>
+  </div>
+</section>
+
+<div class="mt-2 p-2" (click)="deleteOrders()">
+
+    <button class="btn btn-danger btn-block p-2" type="button">Eliminar ordenes</button>
+</div>
