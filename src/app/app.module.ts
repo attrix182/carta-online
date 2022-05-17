@@ -10,8 +10,11 @@ import { ItemDetalleComponent } from './pages/carta/item-detalle/item-detalle.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatButtonModule} from '@angular/material/button';
+import { MakeOrderComponent } from './pages/carta/make-order/make-order.component';
+import { SuccessComponent } from './shared/success/success.component';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
-  declarations: [AppComponent, CartaComponent, TopbarComponent, ItemComponent, ItemDetalleComponent],
+  declarations: [AppComponent, CartaComponent, TopbarComponent, ItemComponent, ItemDetalleComponent, MakeOrderComponent, SuccessComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -19,6 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
     DragDropModule,
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

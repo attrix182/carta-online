@@ -1,11 +1,15 @@
-<div class="carta">
+<div class="carta" *ngIf="!itemOrdered">
   <div *ngFor="let item of items">
     <app-item [item]="item" (selectItem)="showDetail($event)"></app-item>
   </div>
 </div>
+
 <app-item-detalle
   class="item-detalle"
   [item]="itemSelected"
   *ngIf="itemSelected"
   (closeEvent)="closeDetail($event)"
+  (orderItem)="setItemOrdered($event)"
 ></app-item-detalle>
+
+<app-make-order [order]="itemOrdered" *ngIf="itemOrdered"></app-make-order>

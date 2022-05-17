@@ -9,6 +9,7 @@ import { StorageService } from 'src/app/services/storage.service';
 export class CartaComponent implements OnInit {
   public items: any;
   public itemSelected: any;
+  public itemOrdered:any;
   constructor(private storage: StorageService) {}
 
   ngOnInit(): void {
@@ -27,6 +28,12 @@ export class CartaComponent implements OnInit {
     carta.classList.add('carta-overlay');
     console.log(event);
     this.itemSelected = event;
+  }
+
+  setItemOrdered(event: any) {
+    this.closeDetail(event)
+    this.itemOrdered = event;
+    console.log(event);
   }
 
   closeDetail(event: any) {

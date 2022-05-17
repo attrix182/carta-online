@@ -1,0 +1,17 @@
+<section class="make-order container-fluid">
+  <form class="mt-4">
+    <div class="title mt-2">
+        Tu nombre:
+    </div>
+    <input autocomplete="off" class="form-control" type="text" name="name" [(ngModel)]="name" />
+    <div class="title center">
+        Pedido:
+    </div>
+    <app-item [item]="order"></app-item>
+  </form>
+  <div class="center mt-4">
+    <button [disabled]="!name" (click)="postOrder()">
+      <span>Finalizar pedido</span>
+    </button>
+  </div>
+</section>
