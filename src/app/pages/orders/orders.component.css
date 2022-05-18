@@ -26,3 +26,7 @@
     background-color: rgb(53, 173, 89);
     padding-bottom: 5px;
 }
+
+.selected{
+    background: rgb(53, 173, 89);
+}

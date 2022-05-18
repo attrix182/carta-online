@@ -1,17 +1,20 @@
 <article class="card" (click)="showDetails()">
   <div class="row">
     <div class="col-4">
-      <div class="card-img"><img class="img-fluid img-responsive card-img"  src="{{item.img}}" alt=""></div>
+      <div class="card-img"><img class="img-fluid img-responsive card-img" src="{{ item.img }}" alt="" /></div>
     </div>
+
     <div class="col">
-      <div class="row">
-        <div class="card-item-name">{{ item.name }}</div>
-      </div>
-      <div class="row">
-        <div class="card-item-description">{{ item.description }}</div>
-      </div>
-      <div class="row">
-        <div class="card-item-description">{{item.size}} ml</div>
+      <div class="text-overflow">
+        <div class="row">
+          <div class="card-item-name">{{ item.name }}</div>
+        </div>
+        <div class="row">
+          <div class="card-item-description">{{ item.description }}</div>
+        </div>
+        <div class="row">
+          <div class="card-item-description">{{ item.size }} ml</div>
+        </div>
       </div>
     </div>
   </div>

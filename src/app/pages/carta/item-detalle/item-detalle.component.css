@@ -1,5 +1,5 @@
 
-@media only screen and (max-height: 660px) {
+@media only screen and (max-height: 668px) {
   .card-item {
     cursor: move;
     display: flex;
@@ -26,14 +26,14 @@
   }
 }
 
-@media only screen and (min-height: 660px) {
+@media only screen and (min-height: 668px) {
   .card-item {
     cursor: move;
     display: flex;
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 65vh;
+    height: 75vh;
     background: #d6e4f1;
     border-bottom: 0px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
@@ -130,6 +130,7 @@ button {
   padding: 10px 20px;
   border-radius: 100px;
   background: #ef8300;
+  color: black;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
@@ -137,6 +138,7 @@ button {
 }
 
 button:hover {
+  color: black;
   background: #e19211;
 }
 

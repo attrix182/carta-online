@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 export class OrdersComponent implements OnInit {
   public orders: any;
   public auxOrders: any;
+  public filterSelected: any = 'all';
 
   constructor(private storage: StorageService) {}
 
@@ -21,12 +22,48 @@ export class OrdersComponent implements OnInit {
     this.storage.GetAll('orders').subscribe((res) => {
       this.orders = res;
       this.auxOrders = this.orders;
-      //this.filterByPending();
+      this.orderItems(this.filterSelected)
       console.log(res);
     });
   }
 
+  orderItems(filter:string){
+    switch(filter){
+      case 'all':
+        this.filterAll()
+        break;
+      case 'completed':
+        this.filterByCompleted()
+        break
+      case 'pending':
+        this.filterByPending()
+        break;
+    }
+  }
+
+  removeAllClass(){
+    let btnAll = document.querySelector('#all') as HTMLElement;
+    let btnPending = document.querySelector('#pending') as HTMLElement;
+    let btnCompleted = document.querySelector('#completed') as HTMLElement;
+
+    btnAll.classList.remove('selected')
+    btnPending.classList.remove('selected')
+    btnCompleted.classList.remove('selected')
+  }
+
+  filterAll() {
+    this.filterSelected = 'all'
+    this.auxOrders = this.orders;
+    this.removeAllClass();
+    let button = document.querySelector('#all') as HTMLElement;
+    button.classList.add('selected')
+  }
+
   filterByPending() {
+    this.filterSelected = 'pending'
+    this.removeAllClass();
+    let button = document.querySelector('#pending') as HTMLElement;
+    button.classList.add('selected')
     this.auxOrders = this.orders.filter((order) => {
       return order.status !== 'completed';
     });
@@ -34,6 +71,10 @@ export class OrdersComponent implements OnInit {
   }
 
   filterByCompleted() {
+    this.filterSelected = 'completed'
+    this.removeAllClass();
+    let button = document.querySelector('#completed') as HTMLElement;
+    button.classList.add('selected')
     this.auxOrders = this.orders.filter((order) => {
       return order.status === 'completed';
     });
@@ -58,7 +99,7 @@ export class OrdersComponent implements OnInit {
   }
 
   deleteOrders(): any {
-   if(this.orders.length === 0) return;
+    if (this.orders.length === 0) return;
 
     Swal.fire({
       title: '¿Seguro deseas eliminar todos los pedidos?',

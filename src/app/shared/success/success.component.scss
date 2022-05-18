@@ -1,110 +1,130 @@
 .dummy-positioning {
-    width: 100%;
-    height: 66vh;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-  }
-  
-  
-  // The icon specifics
-  // Variables
-  $green:     #4cc93f;
-  $icon-base-size: 20px;
-  
-  // Structure
-  .success-icon {
-    display: inline-block;
-    width: 8em;
-    height: 8em;
-    font-size: $icon-base-size;
-    border-radius: 50%;
-    border: 4px solid lighten($green, 20%);
-    background-color: #fff;
-    position: relative;
-    overflow: hidden;
-    transform-origin: center;
-    animation: showSuccess 180ms ease-in-out;
-    transform: scale(1);
-  }
-  
-  // Elements
-  .success-icon {
-    
-    &__tip,
-    &__long {
-      display: block;
-      position: absolute;
-      height: 4px;
-      background-color: lighten($green, 20%);
-      border-radius: 10px;
-    }
-  
-    &__tip {
-      width: 2.4em;
-      top: 4.3em;
-      left: 1.4em;
-      transform: rotate(45deg);
-      animation: tipInPlace 300ms ease-in-out;
-      animation-fill-mode: forwards;
-      animation-delay: 180ms;
-      visibility: hidden;
-    }
-  
-    &__long {
-      width: 4em;
-      transform: rotate(-45deg);
-      top: 3.70em;
-      left: 2.75em;
-      animation: longInPlace 140ms ease-in-out;
-      animation-fill-mode: forwards;
-      visibility: hidden;
-      animation-delay: 300ms + 140ms;
-    }
-  
-  }
-  
-  @keyframes showSuccess {
-      from {
-          transform: scale(0);
-      }
-      to {
-          transform: scale(1);
-      }
-  }
-  
-  @keyframes tipInPlace {
-      from {
-          width: 0em;
-          top: 0em;
-          left: -1.6em;
-      }
-      to {
-          width: 2.4em;
-          top: 4.3em;
-          left: 1.4em;
-          visibility: visible;
-      }
-  }
-  
-  @keyframes longInPlace {
-      from {
-          width: 0em;
-          top: 5.1em;
-          left: 3.2em;
-      }
-      to {
-          width: 4em;
-          top: 3.70em;
-          left: 2.75em;
-          visibility: visible;
-      }
+  width: 100%;
+  height: 66vh;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+// The icon specifics
+// Variables
+$green: #4cc93f;
+$icon-base-size: 20px;
+
+// Structure
+.success-icon {
+  display: inline-block;
+  width: 8em;
+  height: 8em;
+  font-size: $icon-base-size;
+  border-radius: 50%;
+  border: 4px solid lighten($green, 20%);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center;
+  animation: showSuccess 180ms ease-in-out;
+  transform: scale(1);
+}
+
+// Elements
+.success-icon {
+  &__tip,
+  &__long {
+    display: block;
+    position: absolute;
+    height: 4px;
+    background-color: lighten($green, 20%);
+    border-radius: 10px;
   }
 
-  .success-text{
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #4cc93f;
-    margin-top: 1em;
+  &__tip {
+    width: 2.4em;
+    top: 4.3em;
+    left: 1.4em;
+    transform: rotate(45deg);
+    animation: tipInPlace 300ms ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 180ms;
+    visibility: hidden;
   }
+
+  &__long {
+    width: 4em;
+    transform: rotate(-45deg);
+    top: 3.7em;
+    left: 2.75em;
+    animation: longInPlace 140ms ease-in-out;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    animation-delay: 300ms + 140ms;
+  }
+}
+
+@keyframes showSuccess {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes tipInPlace {
+  from {
+    width: 0em;
+    top: 0em;
+    left: -1.6em;
+  }
+  to {
+    width: 2.4em;
+    top: 4.3em;
+    left: 1.4em;
+    visibility: visible;
+  }
+}
+
+@keyframes longInPlace {
+  from {
+    width: 0em;
+    top: 5.1em;
+    left: 3.2em;
+  }
+  to {
+    width: 4em;
+    top: 3.7em;
+    left: 2.75em;
+    visibility: visible;
+  }
+}
+
+.success-text {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4cc93f;
+  margin-top: 1em;
+}
+
+/* From uiverse.io by @ke1221 */
+button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: rgb(250, 174, 34);
+  border: 1px solid rgb(212, 148, 29);
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px orange;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}

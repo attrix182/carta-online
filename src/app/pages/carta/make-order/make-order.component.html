@@ -1,4 +1,5 @@
-<section class="make-order container-fluid mt-2">
+
+<section class="make-order container-fluid mt-4">
   <form class="mt-4">
     <div class="title mt-4">
         Tu nombre:
@@ -7,7 +8,7 @@
     <div class="title center">
         Pedido:
     </div>
-    <app-item [item]="order"></app-item>
+    <app-item [item]="order" style="height: 100vh;"></app-item>
   </form>
   <div class="center mt-4" *ngIf="!isLoading">
     <button [disabled]="!name" (click)="postOrder()">

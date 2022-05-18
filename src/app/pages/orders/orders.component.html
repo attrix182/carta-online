@@ -2,10 +2,13 @@
 <section>
   <div class="row">
     <div class="col">
-      <button (click)="filterByPending()" class="btn btn-primary btn-block" type="button">Pendietes</button>
+      <button (click)="filterAll()" class="btn btn-primary btn-block" id="all" type="button">Todas</button>
     </div>
     <div class="col">
-      <button (click)="filterByCompleted()" class="btn btn-success btn-block" type="button">Listas</button>
+      <button (click)="filterByPending()" class="btn btn-primary btn-block" id="pending" type="button">Pendietes</button>
+    </div>
+    <div class="col">
+      <button (click)="filterByCompleted()" class="btn btn-primary btn-block" id="completed" type="button">Listas</button>
     </div>
   </div>
 </section>
