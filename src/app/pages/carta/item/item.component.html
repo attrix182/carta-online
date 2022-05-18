@@ -1,7 +1,8 @@
 <article class="card" (click)="showDetails()">
   <div class="row">
     <div class="col-4">
-      <div class="card-img"><img class="img-fluid img-responsive card-img" src="{{ item.img }}" alt="" /></div>
+      <div class="card-img"><img class="img-fluid img-responsive card-img" src="{{ item.img }}" *ngIf="item.img" /></div>
+      <div class="card-img"><img class="img-fluid img-responsive card-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARIAAAC4CAMAAAAYGZMtAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlT3+AEVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8A8WoAAHxScUAAAAAAElFTkSuQmCC"   *ngIf="!item.img" /></div>
     </div>
 
     <div class="col">
